@@ -1,8 +1,5 @@
 "use strict";
 
-/**
- * Page Loader
- */
 window.addEventListener("load", () => {
   const loader = document.querySelector(".page-loader");
   setTimeout(() => {
