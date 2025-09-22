@@ -397,6 +397,87 @@ main {
   text-align: center;
 }
 
+/* Download actions (buttons) under university title */
+.download-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.download-title {
+  color: var(--text-muted);
+  font-size: var(--fs-8);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.btn-download {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px; /* ~ h-11, consistent height */
+  padding: 0 14px;
+  border-radius: var(--radius-xl);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition-short), color var(--transition-short),
+    transform var(--transition-short), box-shadow var(--transition-short);
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-download .btn-text {
+  margin-left: 8px;
+}
+
+.btn-download .btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: var(--white-100);
+}
+
+.btn-primary:hover {
+  background: hsl(220, 70%, 60%);
+  color: var(--white-100);
+}
+
+.btn-meta {
+  margin-top: -6px;
+  margin-bottom: 2px;
+  font-size: var(--fs-8);
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+  background: hsla(0, 0%, 100%, 0.05);
+  color: var(--white-100);
+}
+
+/* Focus states for accessibility */
+.btn-download:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.35);
+}
+
 .info_more-btn {
   position: absolute;
   top: -15px;
