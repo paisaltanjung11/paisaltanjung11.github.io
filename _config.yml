@@ -1,0 +1,7 @@
+# Publishing exclusions only; the application remains a standalone static HTML file.
+exclude:
+  - tests/
+  - .idea/
+  - node_modules/
+  - images/certifications/japanesecakapbahasa.jpg
+  - images/certifications/pdf/google-ads.pdf

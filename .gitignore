@@ -1,0 +1,27 @@
+# Local inputs and editor state
+/.idea/
+/.vscode/
+
+# Private originals not referenced by the website
+/images/certifications/japanesecakapbahasa.jpg
+/images/certifications/pdf/google-ads.pdf
+
+# Local QA tools
+/tests/
+
+# Local tools, output and caches
+/node_modules/
+/_site/
+/.cache/
+/.jekyll-cache/
+/.sass-cache/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

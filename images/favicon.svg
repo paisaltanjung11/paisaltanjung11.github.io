@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">Paisal Tanjung</title>
+  <rect width="64" height="64" rx="12" fill="#60A5FA" />
+  <path fill="#111827" fill-rule="evenodd" d="M10 49V15h12c8 0 12 4 12 11S30 37 22 37h-5v12H10Zm7-27v8h5c3 0 5-1 5-4s-2-4-5-4h-5Z" />
+  <path fill="#111827" d="M35 15h22v7h-7v27h-7V22h-8v-7Z" />
+</svg>
