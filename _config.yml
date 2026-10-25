@@ -1,5 +1,6 @@
 # Publishing exclusions only; the application remains a standalone static HTML file.
 exclude:
+  - general/PaisalTanjung_CV_JP.pdf
   - tests/
   - .idea/
   - node_modules/
