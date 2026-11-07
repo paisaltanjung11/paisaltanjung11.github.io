@@ -174,6 +174,8 @@
       .project-item > a { display: block; height: 100%; }
       .project-img { position: relative; aspect-ratio: 16 / 10; border-radius: 8px; background: var(--surface); overflow: hidden; border: 1px solid var(--border); margin-bottom: 13px; }
       .project-img img { height: 100%; width: 100%; object-fit: contain; transition: transform 300ms ease; }
+      .project-img.is-text-only { display: grid; place-items: center; }
+      .project-img.is-text-only > ion-icon { font-size: 36px; color: var(--accent); }
       .project-item-icon-box { position: absolute; bottom: 10px; right: 10px; display: grid; place-items: center; width: 30px; height: 30px; background: var(--page); border: 1px solid var(--border); border-radius: 6px; color: var(--accent); z-index: 1; }
       .project-item:hover .project-img img { transform: scale(1.025); }
       .project-item a:hover .project-title { color: var(--accent); }
@@ -351,6 +353,7 @@
       .project-dialog-body:focus-visible, .certificate-image:focus-visible { outline-offset: -3px; }
       .project-dialog .certificate-image img { max-height: 48dvh; height: auto; }
       .project-information { display: grid; gap: 22px; padding: 4px 24px 24px; }
+      .project-dialog .certificate-image[hidden] + .project-information { padding-top: 20px; }
       .project-information h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
       .project-information p, .project-features { color: var(--muted); font-size: 14px; line-height: 1.75; }
       .project-features { padding-left: 18px; }
@@ -500,15 +503,14 @@
           <section class="about-text">
             <p>
               I'm a Computer Science student at BINUS University, specializing in
-              Software Engineering, and currently working as an Automation
-              Engineer Intern at NTT DATA, Inc.
+              Software Engineering, and an Automation Engineer Intern at NTT DATA, Inc.
             </p>
 
             <p>
-              My interests lie in software engineering, process automation, and
-              artificial intelligence. I enjoy exploring how these technologies
-              can be applied to develop practical solutions and improve existing
-              processes.
+              I take initiative in learning new technologies and value collaboration
+              in solving practical problems. I'm developing my technical and
+              communication skills, with a focus on building systems that address
+              users' needs and support digital transformation.
             </p>
           </section>
 
@@ -516,13 +518,12 @@
             <section class="opportunities" aria-labelledby="opportunities-title">
               <h3 id="opportunities-title"><ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>Open to Opportunities</h3>
               <p>Full-time &middot; Available from March 2027</p>
-              <p>Roles: Software Engineer &middot; Automation Engineer &middot; AI Engineer</p>
+              <p>Roles: Software Engineer &middot; Automation Engineer &middot; AI Engineer &middot; IT Consultant</p>
               <p class="opportunities-details">On-site &middot; Remote &middot; International</p>
             </section>
 
             <section class="curriculum-vitae" aria-labelledby="cv-title">
               <h3 id="cv-title"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>Curriculum Vitae</h3>
-              <p>English CV.</p>
               <div class="cv-downloads">
                 <a class="cv-download" href="./general/PaisalTanjung_CV_Eng.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Paisal Tanjung's English CV (PDF, opens in a new tab)"><ion-icon name="open-outline" aria-hidden="true"></ion-icon>English CV</a>
               </div>
@@ -654,7 +655,7 @@
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Technologies &amp; Tools</h4>
                 <ul class="competency-badges" aria-label="Technologies and platforms">
-                  <li>Laravel</li><li>ASP.NET</li><li>Git</li><li>Power Automate</li><li>Power BI</li><li>Linux</li><li>SharePoint</li><li>UiPath</li><li>Visual Studio 2022</li><li>Visual Studio Code</li><li>Eclipse</li>
+                  <li>Laravel</li><li>ASP.NET</li><li>Git</li><li>Postman</li><li>Power Automate</li><li>Power BI</li><li>Linux</li><li>SharePoint</li><li>UiPath</li><li>Visual Studio 2022</li><li>Visual Studio Code</li><li>Eclipse</li>
                 </ul>
               </li>
 
@@ -1051,6 +1052,49 @@
             "demo": "https://diabetesclassifierproject-ygyaktmgukybf8tpmzfpbt.streamlit.app/"
           },
           {
+            "id": "autopm",
+            "title": "Auto Preventive Maintenance",
+            "category": "Automation Projects",
+            "image": "./images/projects/AutoPM Maintenance Dashboard.png",
+            "overview": "Automates preventive maintenance reports for IT and network devices by processing logs and diagnostic data, extracting device condition information, and generating Word reports from templates. The dashboard shown is a mockup with dummy data. The original dashboard is not shared to protect privacy and confidentiality.",
+            "technologies": [
+              "Python",
+              "FastAPI",
+              "SQLAlchemy",
+              "JWT (JSON Web Token)",
+              "python-docx",
+              "docxtpl",
+              "docx-mailmerge",
+              "Pydantic"
+            ],
+            "role": "Backend Developer.",
+            "features": [
+              "Device log and diagnostic data processing",
+              "Template-based Word report generation",
+              "Project management with role-based permissions"
+            ]
+          },
+          {
+            "id": "project-audit",
+            "title": "Project Audit – Document Completeness Automation",
+            "category": "Automation Projects",
+            "image": "./images/projects/Project Audit Dashboard.png",
+            "overview": "Automates document completeness checks for approximately 150,000 files across 2,500 projects in under one hour, replacing manual review by the project management team. The dashboard shown is a mockup with dummy data. The original dashboard is not shared to protect privacy and confidentiality.",
+            "technologies": [
+              "Power Automate",
+              "SharePoint",
+              "REST APIs",
+              "Postman",
+              "Power BI"
+            ],
+            "role": "Automation & BI Developer. Designed, implemented, and tested Power Automate workflows and REST API integrations as part of a team. Built the Power BI dashboard for monitoring project document completeness.",
+            "features": [
+              "Checks document requirements and classifies results as Correct, Misplaced, or Missing",
+              "Generates project-level details covering missing documents, incorrect phases, responsible project managers, and related project information",
+              "Provides audit results as a data source for Power BI monitoring dashboards"
+            ]
+          },
+          {
             "id": "uipath-text",
             "title": "UiPath Text Extraction",
             "category": "Automation Projects",
@@ -1158,7 +1202,8 @@
 
           const link = document.createElement("a");
           if (project) link.dataset.projectId = entry.id;
-          link.setAttribute("href", project ? entry.demo || entry.github : entry.url || entry.image);
+          const url = project ? entry.demo || entry.github : entry.url || entry.image;
+          if (url) link.setAttribute("href", url);
           link.target = "_blank";
           link.rel = "noopener noreferrer";
 
@@ -1172,11 +1217,19 @@
             indicator.append(icon);
             figure.append(indicator);
           }
-          const image = document.createElement("img");
-          image.setAttribute("src", entry.image);
-          image.alt = entry.title;
-          image.loading = "lazy";
-          figure.append(image);
+          if (entry.image) {
+            const image = document.createElement("img");
+            image.setAttribute("src", entry.image);
+            image.alt = entry.title;
+            image.loading = "lazy";
+            figure.append(image);
+          } else {
+            figure.classList.add("is-text-only");
+            const icon = document.createElement("ion-icon");
+            icon.setAttribute("name", entry.icon || "document-text-outline");
+            icon.setAttribute("aria-hidden", "true");
+            figure.append(icon);
+          }
 
           const title = document.createElement("h3");
           title.className = "project-title";
@@ -1483,8 +1536,10 @@
         document.querySelectorAll(".project-item").forEach((item) => {
           const image = item.querySelector("img");
           const title = item.querySelector(".project-title").textContent.trim().replace(/\s+/g, " ");
-          image.alt = title;
-          image.decoding = "async";
+          if (image) {
+            image.alt = title;
+            image.decoding = "async";
+          }
           if (!item.closest('[data-page="certifications"]')) return;
 
           // Keep the original document available from the modal footer.
@@ -1515,7 +1570,7 @@
         const projectLinks = projectDialog.querySelector(".project-preview-links");
         const projectsById = new Map(portfolioData.projects.map(project => [project.id, {
           ...project,
-          image: new URL(project.image, document.baseURI).href,
+          image: project.image ? new URL(project.image, document.baseURI).href : null,
           category: project.category.replace(/Projects$/, "Project")
         }]));
 
@@ -1529,8 +1584,14 @@
 
         function openProject(project, trigger) {
           projectTitle.textContent = project.title;
-          projectImage.src = project.image;
-          projectImage.alt = project.title;
+          projectImage.parentElement.hidden = !project.image;
+          if (project.image) {
+            projectImage.src = project.image;
+            projectImage.alt = project.title;
+          } else {
+            projectImage.removeAttribute("src");
+            projectImage.alt = "";
+          }
           projectCategory.textContent = project.category;
           projectInformation.replaceChildren();
           projectLinks.replaceChildren();
